@@ -22,7 +22,8 @@ export function update(){
 }
 
 export function draw(gameBoard){
-  gameBoard.innerHTML = '';
+  const snakeEls = document.querySelectorAll('.snake');
+  snakeEls.forEach(e => e.remove());
   snakeBody.forEach(seg => {
     const html = `<div class="snake" style="grid-row: ${seg.y}; grid-column: ${seg.x}"></div>`;
     gameBoard.insertAdjacentHTML('beforeend', html);

@@ -1,6 +1,6 @@
 :root{
   --grid-size: 21;
-  --cell-radius: 1vmin;
+  --cell-radius: 1.25vmin;
 }
 
 body{
@@ -11,6 +11,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 #game-board{
@@ -31,4 +32,10 @@ body{
 .food{
   background: indianred;
   border-radius: var(--cell-radius);
+  transform: scale(0);
+  transition: transform 0.5s cubic-bezier(.35, 0, .5, 1.5);
+}
+
+.ripe{
+  transform: scale(1);
 }
