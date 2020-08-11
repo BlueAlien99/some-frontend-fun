@@ -1,0 +1,34 @@
+:root{
+  --grid-size: 21;
+  --cell-radius: 1vmin;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game-board{
+  width: 100vmin;
+  height: 100vmin;
+  background: palegreen;
+  display: grid;
+  gap: 0.4vmin;
+  grid-template-columns: repeat(var(--grid-size), 1fr);
+  grid-template-rows: repeat(var(--grid-size), 1fr);
+}
+
+.snake{
+  background: cornflowerblue;
+  border-radius: var(--cell-radius);
+}
+
+.food{
+  background: indianred;
+  border-radius: var(--cell-radius);
+}
